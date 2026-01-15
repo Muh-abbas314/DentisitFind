@@ -1,3 +1,10 @@
+## Project Init
+
+```
+npm i
+npm run dev
+```
+
 ## Component & Styling Decisions
 
 ### Component Structure
