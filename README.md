@@ -52,14 +52,12 @@ Plain CSS files, one per component folder. No CSS modules, no Tailwind, no UI li
 
 ## Time Management
 
-- Setup: 10 minutes
-- Component Structure: 20 minutes
+- Setup: 5 minutes
+- Component Structure: 30 minutes
 - Styling: 60 minutes
-- Helper Functions: 10 minutes
-- Trend Chart: 15 minutes
-- Status Indicator & Borders: 10 minutes
-- Recommendations: 10 minutes
-- README: 5 minutes
+- Helper Functions: 5 minutes
+- Components Polishing (Trend Chart, Status Indicator & Borders, Recommendations): 18 minutes
+- README: 2 minutes
 
-Total: ~2.5 hours
+Total: ~2 hours
 
