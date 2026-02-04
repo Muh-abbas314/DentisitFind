@@ -6,10 +6,11 @@ type CardHeaderProps = {
   name: string;
   city: string;
   country: string;
+  phone?: string;
   status: StatusType;
 };
 
-export default function CardHeader({ name, city, country, status }: CardHeaderProps) {
+export default function CardHeader({ name, city, country, phone, status }: CardHeaderProps) {
   const statusLabel = getStatusLabel(status);
 
   return (
@@ -19,6 +20,9 @@ export default function CardHeader({ name, city, country, status }: CardHeaderPr
         <p className="practice-location">
           {city}, {country}
         </p>
+        {phone && (
+          <p className="practice-phone">{phone}</p>
+        )}
       </div>
       <div className={`status-indicator status-${status}`}>
         <span className="status-dot"></span>

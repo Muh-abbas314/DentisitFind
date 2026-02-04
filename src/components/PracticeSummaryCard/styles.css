@@ -59,6 +59,13 @@
   font-weight: 400;
 }
 
+.practice-phone {
+  margin: 4px 0 0 0;
+  font-size: 0.875rem;
+  color: #555;
+  font-weight: 400;
+}
+
 /* Status Indicator */
 .status-indicator {
   display: flex;
@@ -235,6 +242,30 @@
   outline: 2px solid #4caf50;
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* Edit button */
+.practice-card-edit {
+  margin-top: auto;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2e7d32;
+  background: #fff;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.practice-card-edit:hover {
+  background: #e8f5e9;
+  color: #1b5e20;
+}
+
+.practice-card-edit:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
 }
 
 /* Responsive Design */

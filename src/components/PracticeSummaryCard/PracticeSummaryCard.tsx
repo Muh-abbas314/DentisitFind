@@ -8,9 +8,10 @@ import './styles.css';
 
 type PracticeSummaryCardProps = {
   practice: PracticeSummary;
+  onEdit?: (practice: PracticeSummary) => void;
 };
 
-export default function PracticeSummaryCard({ practice }: PracticeSummaryCardProps) {
+export default function PracticeSummaryCard({ practice, onEdit }: PracticeSummaryCardProps) {
   const status = getStatus(practice.conversionRate);
 
   return (
@@ -19,11 +20,21 @@ export default function PracticeSummaryCard({ practice }: PracticeSummaryCardPro
         name={practice.name}
         city={practice.city}
         country={practice.country}
+        phone={practice.phone}
         status={status}
       />
       <CardMetrics practice={practice} />
       <CardTrend data={practice.monthlyTrend} />
       <CardRecommendations />
+      {onEdit && (
+        <button
+          type="button"
+          className="practice-card-edit"
+          onClick={() => onEdit(practice)}
+        >
+          Edit
+        </button>
+      )}
     </div>
   );
 }

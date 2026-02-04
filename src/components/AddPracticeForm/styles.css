@@ -1,0 +1,235 @@
+/* Form field */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-field-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-field-required {
+  color: #c62828;
+}
+
+.form-field-input {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field-input:hover:not(:disabled) {
+  border-color: #bdbdbd;
+}
+
+.form-field-input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+.form-field-input:disabled {
+  background: #f5f5f5;
+  color: #757575;
+  cursor: not-allowed;
+}
+
+.form-field--error .form-field-input {
+  border-color: #f44336;
+}
+
+.form-field--error .form-field-input:focus {
+  border-color: #f44336;
+  box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.2);
+}
+
+.form-field-error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #c62828;
+  font-weight: 500;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 2px solid #e8e8e8;
+}
+
+.form-actions-cancel {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.form-actions-cancel:hover:not(:disabled) {
+  background: #f5f5f5;
+  border-color: #bdbdbd;
+}
+
+.form-actions-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-actions-submit {
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2e7d32;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 4px rgba(46, 125, 50, 0.3);
+}
+
+.form-actions-submit:hover:not(:disabled) {
+  background: #1b5e20;
+}
+
+.form-actions-submit:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.form-actions-submit:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+
+/* Add practice form */
+.add-practice-form {
+  max-width: 560px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.add-practice-form-summary {
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b71c1c;
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+}
+
+.add-practice-form-section {
+  margin-bottom: 28px;
+}
+
+.add-practice-form-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.add-practice-form-section-title {
+  margin: 0 0 16px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Add practice view */
+.add-practice-view {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.add-practice-view-header {
+  margin-bottom: 28px;
+}
+
+.add-practice-view-title {
+  margin: 0 0 8px 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.add-practice-view-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.add-practice-view-error {
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #b71c1c;
+  background: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+}
+
+/* When form is inside modal */
+.practice-form-modal {
+  min-width: 0;
+}
+
+.practice-form-modal-subtitle {
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.practice-form-modal .add-practice-form {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .add-practice-view {
+    padding: 20px 16px;
+  }
+
+  .add-practice-form {
+    padding: 24px 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
